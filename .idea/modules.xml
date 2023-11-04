@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ZeroTrustApp/ZeroTrustApp.iml" filepath="$PROJECT_DIR$/ZeroTrustApp/ZeroTrustApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ZeroTrustApp (1).iml" filepath="$PROJECT_DIR$/.idea/ZeroTrustApp (1).iml" />
+    </modules>
+  </component>
+</project>
