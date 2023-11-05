@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Support Tickets</title>
+  <style>
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .ticket-form {
+      margin-bottom: 40px;
+    }
+
+    .tickets-list {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+
+    .tickets-list th, .tickets-list td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .tickets-list th {
+      background-color: #f4f4f4;
+    }
+
+    .tickets-list tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    .ticket-link {
+      color: #06c;
+      text-decoration: none;
+    }
+
+    .ticket-link:hover {
+      text-decoration: underline;
+    }
+
+    .buttons-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .button {
+      padding: 10px 15px;
+      margin: 0 10px; /* Spacing between buttons */
+      background-color: #06c;
+      color: white;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Support Ticket System</h1>
+
+<!-- Buttons for Ticket Actions -->
+<div class="buttons-container">
+  <!-- Assuming '/submit-ticket-form' is the path to the form for submitting a new ticket -->
+  <button onclick="window.location.href='/submit-ticket-form';" class="button">Open New Ticket</button>
+  <!-- Assuming '/view-tickets' is the path to the page listing all tickets -->
+  <button onclick="window.location.href='/view-tickets';" class="button">View Existing Tickets</button>
+</div>
+
+<!-- Ticket Submission Form -->
+<div class="ticket-form" style="display: none;"> <!-- Initially hidden, can be shown if needed -->
+  <h2>Open a New Ticket</h2>
+  <form action="/submit-ticket" method="post">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" required></textarea>
+
+    <button type="submit" class="button">Submit Ticket</button>
+  </form>
+</div>
+
+<!-- Existing Tickets List -->
+<div class="tickets-list-container">
+  <h2>Existing Tickets</h2>
+  <table class="tickets-list">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Dynamically populate this section based on the tickets available -->
+    <!-- This is just an example -->
+    <tr>
+      <td>1</td>
+      <td>Issue with login</td>
+      <td>Open</td>
+      <td><a href="/read-ticket/1" class="ticket-link">Read</a></td>
+    </tr>
+    <!-- Repeat for other tickets -->
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

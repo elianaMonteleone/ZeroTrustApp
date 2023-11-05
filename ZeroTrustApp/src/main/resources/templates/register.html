@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2em; /* Makes the header text larger */
+    }
+
+    form {
+      margin: 0 auto;
+      width: fit-content;
+      padding: 20px;
+    }
+
+    label {
+      margin-top: 10px;
+    }
+
+    input[type=text], input[type=password], input[type=email], button, a {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      box-sizing: border-box; /* Include padding and border in the element's width and height */
+    }
+
+    button, a.button-link {
+      color: white;
+      background-color: green;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 1em;
+    }
+
+    a.button-link {
+      padding: 10px 15px;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    button:hover, a.button-link:hover {
+      background-color: darkgreen;
+    }
+
+    .form-section {
+      display: inline-block;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+<h1>Register</h1>
+<div class="form-section">
+  <form action="/register" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+
+    <button type="submit">Register</button>
+  </form>
+  <p>Already have an account?<br>
+    <a href="/login" class="button-link">Login here</a>
+  </p>
+</div>
+</body>
+</html>

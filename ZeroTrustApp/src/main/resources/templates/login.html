@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: 2em; /* Makes the header text larger */
+    }
+
+    form {
+      margin: 0 auto;
+      width: 300px;
+    }
+
+    label, input {
+      display: block;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    input[type=text], input[type=password] {
+      padding: 10px;
+      margin-top: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      color: white;
+      background-color: green;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      display: block; /* Match other inputs */
+      width: 100%; /* Match other inputs */
+    }
+
+    button:hover {
+      background-color: darkgreen;
+    }
+
+    .register-link {
+      text-align: center; /* Center align text */
+      margin-top: 100px; /* Space above the link */
+    }
+
+    .register-link p {
+      margin-bottom: 10px; /* Space below the "Don't have an account?" text */
+    }
+
+    .register-link a {
+      padding: 5px 10px;
+      background-color: green;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px; /* Optional: rounds the corners of the link/button */
+      display: inline-block; /* Align the padding correctly */
+      margin-top: 30px; /* Increased space between the text and link */
+    }
+
+    .register-link a:hover {
+      background-color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+<h1>Login</h1>
+<form action="/login" method="post">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username">
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password">
+
+  <button type="submit">Login</button>
+</form>
+<div class="register-link">
+  <p>Don't have an account?</p>
+  <a href="/register">Register here</a>
+</div>
+</body>
+</html>
